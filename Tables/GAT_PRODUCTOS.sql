@@ -1,0 +1,16 @@
+CREATE TABLE GAT.GAT_PRODUCTOS
+(
+  PROD_ID             NUMBER(10)                NOT NULL,
+  CLIE_ID             NUMBER(10)                NOT NULL,
+  APPL_ID             NUMBER(10)                NOT NULL,
+  PERF_ID             NUMBER(10)                NOT NULL,
+  AUD_CREADO_EN       TIMESTAMP(6)              DEFAULT LOCALTIMESTAMP        NOT NULL,
+  AUD_CREADO_POR      VARCHAR2(45 BYTE)         DEFAULT USER                  NOT NULL,
+  AUD_MODIFICADO_EN   TIMESTAMP(6),
+  AUD_MODIFICADO_POR  VARCHAR2(45 BYTE)
+)
+TABLESPACE USERS
+RESULT_CACHE (MODE DEFAULT)
+/
+
+

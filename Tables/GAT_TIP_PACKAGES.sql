@@ -1,0 +1,23 @@
+CREATE TABLE GAT.GAT_TIP_PACKAGES
+(
+  TPAC_CODIGO         VARCHAR2(2 BYTE)          NOT NULL,
+  NOMBRE              VARCHAR2(60 BYTE)         NOT NULL,
+  GLOSA               VARCHAR2(250 BYTE)        NOT NULL,
+  GENERADO            VARCHAR2(1 BYTE)          NOT NULL,
+  AUD_CREADO_EN       TIMESTAMP(6)              DEFAULT LOCALTIMESTAMP        NOT NULL,
+  AUD_CREADO_POR      VARCHAR2(45 BYTE)         DEFAULT USER                  NOT NULL,
+  AUD_MODIFICADO_EN   TIMESTAMP(6),
+  AUD_MODIFICADO_POR  VARCHAR2(45 BYTE)
+)
+TABLESPACE USERS
+RESULT_CACHE (MODE DEFAULT)
+/
+
+COMMENT ON TABLE GAT.GAT_TIP_PACKAGES IS 'Tipos de packages del framework generados o adhoc'
+/
+
+COMMENT ON COLUMN GAT.GAT_TIP_PACKAGES.GENERADO IS 'Indica si el package es generado vía la herramienta'
+/
+
+
+

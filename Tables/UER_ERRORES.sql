@@ -1,0 +1,41 @@
+CREATE TABLE GAT.UER_ERRORES
+(
+  ERRO_ID             NUMBER(10)                NOT NULL,
+  PROGRAMA            VARCHAR2(120 BYTE)        NOT NULL,
+  MENSAJE             VARCHAR2(4000 BYTE),
+  AUD_CREADO_POR      VARCHAR2(45 BYTE)         DEFAULT USER                  NOT NULL,
+  AUD_CREADO_EN       TIMESTAMP(6)              DEFAULT LOCALTIMESTAMP        NOT NULL,
+  AUD_MODIFICADO_POR  VARCHAR2(45 BYTE),
+  AUD_MODIFICADO_EN   TIMESTAMP(6),
+  LOPR_ID             NUMBER(10)
+)
+TABLESPACE USERS
+RESULT_CACHE (MODE DEFAULT)
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.ERRO_ID IS 'Id de Valores Generales'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.PROGRAMA IS 'Programa ejecutado'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.MENSAJE IS 'Mensaje de error'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.AUD_CREADO_POR IS 'Usuario que creo el registro'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.AUD_CREADO_EN IS 'Fecha y Hora de la creación del registro'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.AUD_MODIFICADO_POR IS 'Usuario que modificó por última vez el registro'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.AUD_MODIFICADO_EN IS 'Fecha y Hora de la última modificación del registro'
+/
+
+COMMENT ON COLUMN GAT.UER_ERRORES.LOPR_ID IS 'Id del log de procesos'
+/
+
+
+
